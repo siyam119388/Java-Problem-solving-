@@ -1,1 +1,30 @@
 
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int t = scanner.nextInt(); // number of test cases
+        while (t-- > 0) {
+            int n = scanner.nextInt(); // number of rows in the beatmap
+            int[] result = new int[n];
+            
+            for (int i = 0; i < n; i++) {
+                String row = scanner.next(); // input the row of beatmap
+                for (int j = 0; j < 4; j++) {
+                    if (row.charAt(j) == '#') {
+                        result[n - i - 1] = j + 1; // store the column position, counting from bottom to top
+                        break;
+                    }
+                }
+            }
+            
+            // Output the result for the current test case
+            for (int i = 0; i < n; i++) {
+                System.out.print(result[i] + " ");
+            }
+            System.out.println();
+        }
+        scanner.close();
+    }
+}
