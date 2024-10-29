@@ -12,7 +12,7 @@ public class Main {
             // The minimum value of (c-a) + (b-c) is achieved when c = (a + b) / 2
             int c = (a + b) / 2;
             
-            // Compute the value of (c - a) + (b - c)
+           
             int result = (c - a) + (b - c);
             
             // Output the result for the current test case
